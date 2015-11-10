@@ -3,6 +3,7 @@ from django.shortcuts import render_to_response
 from mysite.books.models import Author
 from mysite.books.models import Book
 import datetime
+#lab4 modified
 correct_flag = False
 author_flag = False
 flag1 = False

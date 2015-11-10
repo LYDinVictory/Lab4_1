@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-
+#lab4 modified
 import sae.const
 MYSQL_DB = sae.const.MYSQL_DB 
 MYSQL_USER = sae.const.MYSQL_USER 

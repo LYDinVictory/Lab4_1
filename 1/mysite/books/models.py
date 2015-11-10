@@ -1,6 +1,6 @@
 from django.db import models
 # Create your models here.
-
+#modified for lab4
 class Author(models.Model):
     AuthorID = models.CharField(max_length = 30)
     Name = models.CharField(max_length = 40)
