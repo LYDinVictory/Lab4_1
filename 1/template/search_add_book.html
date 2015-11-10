@@ -1,0 +1,42 @@
+</br>
+</br>
+<h2 align = "center">Please input the related information</h2>
+<style type="text/css">
+body {background-image:url(/picture/bg1.gif);}
+</style>
+</br>
+<h3 align = "center" style="color:Red;">Attetion! the format of the PublishDate:2001-1-2</h3>
+<form method="post">
+<table align = "center" border='2'>
+<tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>AuthorID</th>
+    <th>Publisher</th>
+    <th>PublishDate</th>
+    <th>Price</th>
+</tr>
+<tr>
+    <td><input type="text" name="ISBN"></td>
+    <td><input type="text" name="Title"></td>
+    <td><input type="text" name="AuthorID"></td>
+    <td><input type="text" name="Publisher"></td>
+    <td><input type="text" name="PublishDate"></td>
+    <td><input type="text" name="Price"></td>
+    <td>
+    <form action="" method="get">
+    <input type="submit" value="save" name="save_book">
+    <input type="reset" value="reset">
+    </form>
+    </td>
+</tr>
+</table>
+</form>
+{% if flag %}
+<h4 align = "center">Add book successful!</h4>
+{% endif %}
+{% if blank_flag %}
+<h4 align = "center">Input all items!</h4>
+{% endif %}
+</br>
+<a href="/search/">return homepage</a>

@@ -1,0 +1,49 @@
+</br>
+</br>
+<h3 align = "center">Book Details:</h3>
+<style type="text/css">
+body {background-image:url(/picture/bg1.gif);}
+</style>
+<table align = "center" border='2'>
+<tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>AuthorID</th>
+    <th>Publisher</th>
+    <th>PublishDate</th>
+    <th>Price</th>
+</tr>
+<tr>
+    <th>{{book.ISBN}}</th>
+    <th>{{book.Title}}</th>
+    <th>{{book.AuthorID.AuthorID}}</th>
+    <th>{{book.Publisher}}</th>
+    <th>{{book.PublishDate}}</th>
+    <th>{{book.Price}}</th>
+</tr>
+<a  href="/update/{{book.Title}}/" target="_blank">update information of the book</a>
+</br>
+<a  href="/search/">return to homepage</a>
+
+</table>
+    
+<br/>
+     
+<br/>    
+
+<h3 align = "center">Author Details:</h3>
+<table align = "center" border='2'>
+<tr>
+    <td>AuthorID</td>
+    <td>Name</td>
+    <td>Age</td>
+    <td>Country</td>
+    
+</tr>
+<tr>
+    <td>{{author.AuthorID}}</td>
+    <td>{{author.Name}}</td>
+    <td>{{author.Age}}</td>
+    <td>{{author.Country}}</td>
+</tr>
+</table>

@@ -1,0 +1,34 @@
+</br>
+</br>
+<style type="text/css">
+body {background-image:url(/picture/bg1.gif);}
+</style>
+<h2 align = "center">the author is not in the BookDB,please add the author</h2>
+<form method="post">
+<table align = "center" border='2'>
+<tr>
+    <th>AuthorID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Country</th>
+</tr>
+<tr>
+    <td><input type="text" name="AuthorID"></td>
+    <td><input type="text" name="Name"></td>
+    <td><input type="text" name="Age"></td>
+    <td><input type="text" name="Country"></td>
+    <td>
+    <form action="" method="get">
+    <input type="submit" value="save" name="save_author">
+    <input type="reset" value="reset">
+    </form>
+    </td>
+</tr>
+</table>
+{% if author_flag %}
+<h4 align = "center"> The author has existed!</h4>
+{% endif %}
+{% if blank_flag %}
+<h4 align = "center"> Input all items!</h4>
+{% endif %}
+</form>

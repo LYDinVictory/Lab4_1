@@ -1,0 +1,45 @@
+</br>
+</br>
+<h2 align = "center">Please input the incorrect information</h2>
+<style type="text/css">
+body {background-image:url(/picture/bg1.gif);}
+</style>
+<br/>
+<h3 align = "center" style="color:Red;">Attetion! the format of the PublishDate:2001-1-2</h3>
+<br/>
+<br/>
+<form method="post">
+<table align = "center" border='2'>
+<tr>
+    <th>ISBN(can't change)</th>
+    <th>Title(can't change)</th>
+    <th>AuthorID</th>
+    <th>Publisher</th>
+    <th>PublishDate</th>
+    <th>Price</th>
+</tr>
+<tr>
+    <td><input type="text" name="ISBN" value="{{books.ISBN}}"></td>
+    <td><input type="text" name="Title" value="{{books.Title}}"></td>
+    <td><input type="text" name="AuthorID" value="{{books.AuthorID.AuthorID}}"></td>
+    <td><input type="text" name="Publisher" value="{{books.Publisher}}"></td>
+    <td><input type="text" name="PublishDate" value="{{books.PublishDate}}"></td>
+    <td><input type="text" name="Price" value="{{books.Price}}"></td>
+    <td>
+    <form action=" " method="get">
+    <input type="submit" value="save" name="save_update">
+    <input type="reset" value="reset">
+    </form>
+    </td>
+</tr>
+</table>
+{% if correct_flag %}
+<h4 align = "center">correct successful!</h4>
+{% endif %}
+{% if blank_flag %}
+<h4 align = "center"> Input all items!</h4>
+{% endif %}
+</form>
+</br>
+</br>
+<a href="/search/">return homepage</a>

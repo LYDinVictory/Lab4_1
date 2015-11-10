@@ -1,0 +1,29 @@
+</br>
+</br>
+<h2 align = "center" >You searched for:<strong>{{query}}</strong></h2>
+<style type="text/css">
+body {background-image:url(/picture/bg1.gif);}
+</style>
+{% if books %}
+    <h3 align = "center" > Found {{books|length}} book{{books|pluralize}}.</h3>
+    <br/>
+    <br/>
+    <table align = "center" border='1'>
+    {% for book in books %}
+    <tr>
+        <td>
+            <a href="/detail/{{book.Title}}/" target="_blank">{{book.Title}}</a>
+            
+        </td>
+        <td>
+        <form action="/search/Delete/{{book.Title}}" method="get">
+        <input type="submit"  align = "center" value="Delete">
+        </form>
+        </td>
+    </tr>
+    {% endfor %}
+    </table>
+
+{% else %}
+    <p  align = "center">No books matched your search criteria.</p>
+{% endif %}

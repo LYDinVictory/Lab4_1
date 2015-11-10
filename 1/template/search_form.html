@@ -1,0 +1,51 @@
+<html>
+</br>
+</br>
+<head>
+    <title>BookDB</title>
+</head>
+<style type="text/css">
+body {background-image:url(/picture/bg1.gif);}
+</style>
+
+<body>
+    
+    <h1 align = "center" style="color:Darkorange;">Welcome to Book Database!</h1>
+    {% if errors %}
+        <ul align = "center" style="color:Red">
+            {% for error in errors %}
+               <h3> {{error}}</h3>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+    <form  align = "center" action="/search/" method="get">
+    <h2>Please input the name of the author:</h2>
+   
+    
+        <input type="text" name="q">
+        <input type="submit" value="Search">
+    </form>
+    <br/>
+ 
+    <form  align = "center" action="/search_Add" method="get">
+    <input type="submit" value="Click me,then you can add a book">
+    </form>
+    <table align = "center" border='2'>
+<tr>
+    <th>AuthorID</th>
+    <th>AuthorName</th>
+   
+</tr>
+<br/>  
+<h3  align = "center" style="color:Darkorange;">Database</h3>
+{% for author in authors %}
+<tr>
+    <td>{{author.AuthorID}}</td>
+    <td>{{author.Name}}</td>
+    
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
